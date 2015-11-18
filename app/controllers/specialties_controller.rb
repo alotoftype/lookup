@@ -5,6 +5,7 @@ class SpecialtiesController < ApplicationController
   # GET /specialties.json
   def index
     @specialties = Specialty.all
+    @specialty_grid = initialize_grid(Specialty)
   end
 
   # GET /specialties/1

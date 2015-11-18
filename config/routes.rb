@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get '/', :to => 'main#index'
   post '/main', :to => 'main#index'
   resources :physicians
-  resources :med_offices
+  resources :med_offices do
+    get :autocomplete_med_offices_name, :on => :collection
+  end
   resources :specialties
   resources :services
 

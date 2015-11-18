@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+
+
 <p>
   <strong>Region:</strong>
-  <%= @med_office.region %>
+  <%= @med.region %>
 </p>
 
 <p>
@@ -34,8 +37,18 @@
   <strong>Landmark:</strong>
   <%= @med_office.landmark %>
 </p>
-
-<p>
+<hr>
+  <p><strong>Services: </strong> <br>
+    <% @med.services.each do |s| %>
+    <%= s.name %></p>
+<% end %>
+<hr >
+    <p><strong>Specialties: </strong> <br>
+      <% @med.specialties.each do |s| %>
+        <%= s.name %></p>
+      <% end %>
+     <hr>
+      <p>
   <strong>Fax:</strong>
   <%= @med_office.fax %>
 </p>

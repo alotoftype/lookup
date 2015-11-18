@@ -1,17 +1,11 @@
 <h1>Search for Medical Office Info</h1>
 <div class="row">
 
-<div class="col-12">
-<%= form_tag main_path method: :post do %>
- <%= text_field_tag :s, nil %>
-  <% end %>
-
-</div>
 
 <div class="col-12">
-  <% @medoffice.each do |question| %>
+  <% @medoffice.each do |o| %>
     <div>
-      <h3><%= link_to question.name, question %></h3>
+      <h3><%= link_to o.name, o %></h3>
     </div>
   <% end %>
 </div>

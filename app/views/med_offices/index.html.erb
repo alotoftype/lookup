@@ -30,44 +30,6 @@
 
 end -%>
 </div>
-<table>
-  <thead>
-    <tr>
-      <th>Region</th>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Parking</th>
-      <th>Hours</th>
-      <th>Cross street</th>
-      <th>Landmark</th>
-      <th>Fax</th>
-      <th>Urgent</th>
-      <th>Routine</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @med_offices.each do |med_office| %>
-      <tr>
-        <td><%= med_office.region %></td>
-        <td><%= med_office.name %></td>
-        <td><%= med_office.address %></td>
-        <td><%= med_office.parking %></td>
-        <td><%= med_office.hours %></td>
-        <td><%= med_office.cross_street %></td>
-        <td><%= med_office.landmark %></td>
-        <td><%= med_office.fax %></td>
-        <td><%= med_office.urgent %></td>
-        <td><%= med_office.routine %></td>
-        <td><%= link_to 'Show', med_office %></td>
-        <td><%= link_to 'Edit', edit_med_office_path(med_office) %></td>
-        <td><%= link_to 'Destroy', med_office, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 
 <br>
 

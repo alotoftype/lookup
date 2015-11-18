@@ -4,13 +4,18 @@ class MedOfficesController < ApplicationController
   # GET /med_offices
   # GET /med_offices.json
   def index
-    @med_offices = MedOffice.all
     @physician_grid = initialize_grid(MedOffice)
   end
 
   # GET /med_offices/1
   # GET /med_offices/1.json
   def show
+    @med = MedOffice.find(params[:id])
+    @med.services
+    @med.specialties
+    @med.physicians
+
+
   end
 
   # GET /med_offices/new

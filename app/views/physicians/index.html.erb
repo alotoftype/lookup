@@ -2,33 +2,26 @@
 
 <h1>Listing Physicians</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Gender</th>
-      <th>Degree</th>
-      <th>Specialty</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= grid(@physician_grid, show_filters: :always) do |g|
 
-  <tbody>
-    <% @physicians.each do |physician| %>
-      <tr>
-        <td><%= physician.first_name %></td>
-        <td><%= physician.last_name %></td>
-        <td><%= physician.gender %></td>
-        <td><%= physician.degree %></td>
-        <td><%= physician.specialty_id %></td>
-        <td><%= link_to 'Show', physician %></td>
-        <td><%= link_to 'Edit', edit_physician_path(physician) %></td>
-        <td><%= link_to 'Destroy', physician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  g.column  name: 'First Name' do |task|
+    task.first_name
+  end
+
+  g.column  name: 'Last Name'do |task|
+    task.last_name
+  end
+
+  g.column  name: 'Degree'do |task|
+    task.degree
+  end
+
+  g.column  name: 'Gender'do |task|
+    task.gender
+  end
+
+
+end -%>
 
 <br>
 

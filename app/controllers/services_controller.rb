@@ -5,6 +5,7 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     @services = Service.all
+    @service_grid = initialize_grid(Service)
   end
 
   # GET /services/1

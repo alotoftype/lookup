@@ -5,6 +5,7 @@ class PhysiciansController < ApplicationController
   # GET /physicians.json
   def index
     @physicians = Physician.all
+    @physician_grid = initialize_grid(Physician)
   end
 
   # GET /physicians/1

@@ -3,8 +3,8 @@ ruby "2.2.3"
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'elasticsearch-model'
-  gem 'elasticsearch-rails'
+  #gem 'elasticsearch-model'
+  #gem 'elasticsearch-rails'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'rails3-jquery-autocomplete'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -27,7 +27,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'searchkick'
+#gem 'searchkick'
 
 gem 'devise'
 gem 'bootstrap-sass'

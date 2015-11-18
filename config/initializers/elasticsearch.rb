@@ -1,0 +1,1 @@
+ENV["ELASTICSEARCH_URL"] ="http://paas:b080735ea362362aba18e60906dac991@dwalin-us-east-1.searchly.com"

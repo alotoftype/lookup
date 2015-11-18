@@ -3,6 +3,8 @@ ruby "2.2.3"
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'elasticsearch-model'
+  gem 'elasticsearch-rails'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

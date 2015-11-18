@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @med_office.region %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @med_office.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @med_office.address %>
+</p>
+
+<p>
+  <strong>Parking:</strong>
+  <%= @med_office.parking %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @med_office.hours %>
+</p>
+
+<p>
+  <strong>Cross street:</strong>
+  <%= @med_office.cross_street %>
+</p>
+
+<p>
+  <strong>Landmark:</strong>
+  <%= @med_office.landmark %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @med_office.fax %>
+</p>
+
+<p>
+  <strong>Urgent:</strong>
+  <%= @med_office.urgent %>
+</p>
+
+<p>
+  <strong>Routine:</strong>
+  <%= @med_office.routine %>
+</p>
+
+<%= link_to 'Edit', edit_med_office_path(@med_office) %> |
+<%= link_to 'Back', med_offices_path %>

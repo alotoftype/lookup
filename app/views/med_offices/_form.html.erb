@@ -1,0 +1,57 @@
+<%= form_for(@med_office) do |f| %>
+  <% if @med_office.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@med_office.errors.count, "error") %> prohibited this med_office from being saved:</h2>
+
+      <ul>
+      <% @med_office.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :region %><br>
+    <%= f.text_area :region %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :parking %><br>
+    <%= f.check_box :parking %>
+  </div>
+  <div class="field">
+    <%= f.label :hours %><br>
+    <%= f.text_area :hours %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_street %><br>
+    <%= f.text_area :cross_street %>
+  </div>
+  <div class="field">
+    <%= f.label :landmark %><br>
+    <%= f.text_area :landmark %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :urgent %><br>
+    <%= f.text_field :urgent %>
+  </div>
+  <div class="field">
+    <%= f.label :routine %><br>
+    <%= f.text_field :routine %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

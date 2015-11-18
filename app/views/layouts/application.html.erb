@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Look</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <%= link_to 'Call Center Tool', root_path %>
+
+    </li>
+      <li><%= link_to 'medical office', med_offices_path %></li>
+      <li><%=	 link_to 'specialties', specialties_path %></li>
+      <li><%= link_to'services', services_path %></li>
+      <li><%= link_to'physician', physicians_path %></li>
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->
+<!-- Page Content -->
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+<%= yield %>
+
+  </div>
+</div>
+</div>
+<!-- /#page-content-wrapper -->
+
+</div>
+<script>
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+</script>
+</body>
+</html>
